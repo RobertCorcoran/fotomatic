@@ -35,6 +35,7 @@ header {
   width: 100%;
   border-bottom: solid 1px #c6c1c1;
   background-color: white;
+  z-index: 1;
 }
 
 header .content {
@@ -79,13 +80,17 @@ header .mobile {
   justify-content: flex-start;
   align-items: flex-start;
   height: 43.5rem;
+  background-image: url(../images/banner-landingpage.jpg);
 }
 
 #sign-up-cta {
-  padding: 0 5rem 2.5rem 5rem;
+  padding: 0 5rem 3.5rem 5rem;
   border: solid 1px #979797;
   border-radius: 4px;
   background-color: #9dc20b;
+  position: relative;
+  left: 100px;
+  top: 170px;
 }
 
 #sign-up-cta .content {
@@ -140,8 +145,14 @@ header .mobile {
 }
 
 .feature .image-container {
-  width: 90%;
-  height: 65%;
+  width: 100%;
+  height: auto;
+  margin-bottom: 2.5rem;
+}
+
+.feature img {
+  width: 100%;
+  height: auto;
   margin: 0 auto;
 }
 
@@ -150,6 +161,7 @@ header .mobile {
   font-size: 2.25rem;
   font-weight: bold;
   color: #4a4a4a;
+  line-height: 1.2;
 }
 
 .feature h3 {
@@ -188,6 +200,11 @@ header .mobile {
 #filters-section .images-container {
   max-width: 100%;
   padding: 0 1%;
+  display: flex;
+}
+#filters-section .image-container img {
+  height: auto;
+  width: 100%;
 }
 
 
@@ -197,13 +214,13 @@ header .mobile {
   background-color: #f3f3f3;
 }
 
-#quotes-section content {
+#quotes-section .content {
   padding: 5rem 0;
 }
 
-#quotes-section quote {
+#quotes-section .quote {
   padding-right: 1.875rem;
-  font-family: "Palatino", serif;
+  font-family: "Palatino", "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;;
   font-size: 1.875rem;
   line-height: 1.1;
   font-style: italic;
@@ -212,6 +229,7 @@ header .mobile {
 
 #quotes-section quote-citation {
   height: 1.875rem;
+  width: auto;
 }
 
 
