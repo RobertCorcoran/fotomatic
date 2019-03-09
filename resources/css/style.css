@@ -71,6 +71,9 @@ header .icon {
 header .mobile {
   display: none;
 }
+header .tablet {
+  display: none;
+}
 
 
 /* Sign Up Section */
@@ -81,6 +84,8 @@ header .mobile {
   align-items: flex-start;
   height: 43.5rem;
   background-image: url(../images/banner-landingpage.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 #sign-up-cta {
@@ -135,6 +140,10 @@ header .mobile {
   justify-content: space-between;
   padding: 4rem 5%;
   background-color: #f3f3f3;
+}
+
+#features-section .content {
+  padding-bottom: 1.875rem;
 }
 
 .feature {
@@ -250,84 +259,33 @@ footer .copyright {
   flex-grow: 1;
 }
 
-/* All rules that are specific to small screens */
 
-@media only screen and (max-width: 450px) {
-  #sign-up-section {
-    height: 20rem;
-  }
-
-  #sign-up-cta h1 {
-    font-size: 2.25rem;
-  }
-
-  #sign-up-cta h2 {
-    font-size: 2rem;
-  }
-}
 
 /* All rules specific to screens <891px */
 
 @media only screen and (max-width: 890px) {
-  .feature h2 {
-    font-size: 1.125rem;
-    line-height: 1.3;
-    font-weight: normal;
-  }
 
-  .feature h3 {
-    font-size: .875rem;
-    line-height: 1.4;
-  }
-}
-
-/* All rules specific to screens >760px */
-
-@media only screen and (min-width: 761px) {
-  footer .content {
-    font-size: .625rem;
-  }
-}
-
-/* All rules that are specific to screens <761px */
-
-@media only screen and (max-width: 760px) {
-  .main-content {
-    top: 2.5625rem;
-  }
+  /* Header for <891px */
 
   header .desktop {
     display: none;
   }
 
-  header .mobile {
-    display: block;
-    width: 100%;
+  header .tablet {
+    display: inherit;
   }
 
-  header .content {
-    padding: .5rem 0;
-  }
-
-  header .mobile ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-  }
-
-  header .mobile li {
-    padding: 0;
-  }
-
-  header .mobile .button {
+  header .button {
     padding: .1875rem .5rem;
     background-color: #9dc20b;
     line-height: 1.6;
     color: white;
+    display: block;
+    width: 100%;
   }
 
-  /* Sign up section for <761px */
+  /* Sign up section for <891px */
+
   #sign-up-section {
     align-items: center;
     justify-content: center;
@@ -357,15 +315,69 @@ footer .copyright {
   #sign-up-cta h2 {
     font-size: 2.25rem;
   }
-  #features-section {
-    flex-flow: column;
+}
+
+
+
+/* All rules that are specific to screens <761px */
+
+@media only screen and (max-width: 760px) {
+  .main-content {
+    top: 2.5625rem;
+  }
+
+  header .desktop {
+    display: none;
+  }
+
+  header .tablet {
+    display: none;
+  }
+
+  header .mobile {
+    display: block;
+    width: 100%;
+  }
+
+  header .content {
+    padding: .5rem 0;
+  }
+
+  header .mobile ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  header .mobile li {
     padding: 0;
   }
 
   /* Features section for <761px */
+
+  #features-section {
+    flex-flow: column;
+    padding: 0;
+  }
   .feature {
     margin: 0;
     padding: 1.25rem 1rem 0 1rem;
+  }
+  .feature h2 {
+    font-size: 1.125rem;
+    line-height: 1.3;
+    font-weight: normal;
+  }
+
+  .feature h3 {
+    font-size: .875rem;
+    line-height: 1.4;
+  }
+
+  .feature img {
+    width: 90%;
+    height: auto;
   }
 
   /* Filters section for <761px */
@@ -398,18 +410,36 @@ footer .copyright {
   }
 
   /* Quotes section for <761px */
-  #quotes-section content {
+  #quotes-section .content {
     padding: 1.875rem .625rem;
   }
 
-  #quotes-section quote {
+  #quotes-section .quote {
     font-size: 1.5rem;
     line-height: 1.4;
   }
 
-  #quotes-section quote-citation {
+  #quotes-section .quote-citation {
     display: block;
     padding-top: 1rem;
     margin: auto;
+  }
+}
+/* All rules that are specific to small screens */
+
+@media only screen and (max-width: 450px) {
+  #sign-up-section {
+    height: 20rem;
+  }
+
+  #sign-up-cta h1 {
+    font-size: 2.25rem;
+  }
+
+  #sign-up-cta h2 {
+    font-size: 2rem;
+  }
+  footer .content {
+    font-size: .625rem;
   }
 }
